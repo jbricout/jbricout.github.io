@@ -8368,6 +8368,140 @@ h1, h2, h3, h4, h5,
   font-size: 20px;
   font-weight: 900; }
 
+
+.hero-wrap-nospace {
+  width: 100%;
+  height: 100%;
+  position: inherit; }
+  .hero-wrap-nospace .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 0;
+    z-index: -1; }
+  .hero-wrap-nospace .slider-text {
+    
+    z-index: 0;
+    overflow: hidden; }
+    @media (max-width: 991.98px) {
+      .hero-wrap-nospace .slider-text {
+        text-align: center;
+         } }
+    .hero-wrap-nospace .slider-text .one-third {
+      width: 60%;
+      position: relative;
+      z-index: -1; }
+      .hero-wrap-nospace .slider-text .one-third .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #000;
+        opacity: 0; }
+      @media (max-width: 1199.98px) {
+        .hero-wrap-nospace .slider-text .one-third {
+          width: 100%;
+          z-index: 0; }
+          .hero-wrap-nospace .slider-text .one-third .overlay {
+            opacity: .3; }
+          .hero-wrap-nospace .slider-text .one-third:after {
+            opacity: 0; } }
+    .hero-wrap-nospace .slider-text .one-forth {
+      position: relative;
+      height: 750px; }
+      @media (min-width: 992px) {
+        .hero-wrap-nospace .slider-text .one-forth {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 1200px;
+          margin: 0 auto; } }
+      @media (max-width: 1199.98px) {
+        .hero-wrap-nospace .slider-text .one-forth {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+          padding: 1em; } }
+      @media (max-width: 991.98px) {
+        .hero-wrap-nospace .slider-text .one-forth {
+          height: 600px; } }
+      .hero-wrap-nospace .slider-text .one-forth .text {
+        position: relative; }
+        @media (min-width: 992px) {
+          .hero-wrap-nospace .slider-text .one-forth .text {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: 0;
+            max-width: 40%;
+            padding-left: 45px;
+            padding-right: 3em; } }
+    .hero-wrap-nospace .slider-text .subheading {
+      color: #000;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      display: inline-block;
+      color: #6927ff; }
+    .hero-wrap-nospace .slider-text .text {
+      position: relative;
+      z-index: 1; }
+    .hero-wrap-nospace .slider-text h1 {
+      font-size: 60px;
+      color: #000;
+      line-height: 1.2;
+      font-weight: 700; }
+      .hero-wrap-nospace .slider-text h1 span {
+        display: block;
+        font-weight: 700; }
+      @media (max-width: 991.98px) {
+        .hero-wrap-nospace .slider-text h1 {
+          font-size: 50px; } }
+      @media (max-width: 767.98px) {
+        .hero-wrap-nospace .slider-text h1 {
+          font-size: 40px; } }
+    .hero-wrap-nospace .slider-text p {
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: 400; }
+      @media (max-width: 991.98px) {
+        .hero-wrap-nospace .slider-text p {
+          color: rgba(0, 0, 0, 0.7);
+          font-size: 20px; } }
+      .hero-wrap-nospace .slider-text p .number {
+        color: #38d39f; }
+    .hero-wrap-nospace .slider-text .btn-custom {
+      color: #fff;
+      background: #6927ff;
+      padding: 10px 20px; }
+  .hero-wrap-nospace.hero-wrap-nospace-2 {
+    height: 600px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; }
+    @media (max-width: 1199.98px) {
+      .hero-wrap-nospace.hero-wrap-nospace-2 {
+        background-position: top center !important; } }
+    .hero-wrap-nospace.hero-wrap-nospace-2 .slider-text {
+      height: 600px !important; }
+      @media (max-width: 991.98px) {
+        .hero-wrap-nospace.hero-wrap-nospace-2 .slider-text {
+          text-align: center;
+          height: 600px !important; } }
+
 .hero-wrap {
   width: 100%;
   height: 100%;
