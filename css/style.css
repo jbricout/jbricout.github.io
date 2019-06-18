@@ -88,6 +88,10 @@ p {
   margin-top: 0;
   margin-bottom: 1rem; }
 
+li {
+  font-size: 19px;
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
