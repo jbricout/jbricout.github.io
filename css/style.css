@@ -8368,6 +8368,11 @@ h1, h2, h3, h4, h5,
   font-size: 20px;
   font-weight: 900; }
 
+.centered-nospace {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
 
 .hero-wrap-nospace {
   width: 100%;
@@ -8383,7 +8388,7 @@ h1, h2, h3, h4, h5,
     opacity: 0;
     z-index: -1; }
   .hero-wrap-nospace .slider-text {
-    
+
     z-index: 0;
     overflow: hidden; }
     @media (max-width: 991.98px) {
