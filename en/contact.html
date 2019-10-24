@@ -38,13 +38,13 @@
     <link rel="stylesheet" href="../css/icomoon.css">
     <link rel="stylesheet" href="../css/style.css">
 
-    <link rel="icon" type="image/png" href="../images/logo.png"/>
+    <link rel="icon" type="image/png" href="../images/favicon.png"/>
   </head>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html"></a>
+          <a class="navbar-brand" href="index.html"><img src="../images/jb.png"  style="max-width: 10%;" class="hide-mobile" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span>
           Menu
@@ -53,10 +53,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="portfolio.html" class="nav-link">Portfolio</a>
+              <a href="index.html" class="nav-link">Portfolio</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">About</a>
@@ -78,69 +75,35 @@
     </nav>
     <!-- END nav -->
 
-    <div>
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-start">
-          <div class="col-md-8 text-center text-md-left mb-5" style="margin-top:2em!important;">
-            <p class="breadcrumbs">
-              <span class="mr-3">
-                <a href="index.html">Home
-                  <i class="ion-ios-arrow-forward"></i>
-                </a>
-              </span>
-              <span>Contact</span></p>
-            <h1 class="mb-3 bread">Contact me</h1>
-          </div>
+    <section class="ftco ftco-animate margin-desktop-sm">
+        <div class="container" style="padding-bottom:6em;">
+          <div class="row">
+            <div class="col-md-12 ftco ftco-animate">
+                <h2 class="mb-3" style="font-weight: 600;">Contact me</h2>
+                <p style="font-weight: 100;">You want me to work for you? Send me a message!</p></br>
+                <p>Email: juliettebricout@live.fr</p>
+                <p><i class="fa fa-map-marker-alt"></i> Paris, France</p></br>
+  
+                <h3 style="font-weight: 600;">Write me</h3>
+              <form action="https://formspree.io/juliettebricout@live.fr" method="POST" class="">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="_replyto" class="form-control" placeholder="Your mail">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Your message..."></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Send" class="btn btn-primary py-3 px-5">
+                </div>
+              </form>
+            </div>
         </div>
       </div>
     </div>
-
-    <section class="ftco ftco-animate">
-      <div class="container" style="padding-bottom:6em;">
-        <div class="row">
-          <div class="col-md-7">
-
-            <form action="https://formspree.io/juliettebricout@live.fr" method="POST" class="">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Your name">
-              </div>
-              <div class="form-group">
-                <input type="text" name="_replyto" class="form-control" placeholder="Your email">
-              </div>
-              <div class="form-group">
-                <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Your message"></textarea>
-              </div>
-              <div class="form-group" align="right">
-                <input type="submit" value="Send" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-4">
-            <p>
-              <i class="fa fa-map-marker-alt"></i>
-              Paris, France
-            </br>
-            <i class="fa fa-envelope"></i>
-            <a href="mailto:juliettebricout@live.fr">
-              juliettebricout@live.fr
-            </a>
-          </br>
-          <span>
-            <i class="fab fa-linkedin-in"></i>
-            <a href="http://linkedin.com/in/juliettebricout/">linkedin.com/in/juliettebricout</a>
-          </br>
-          <i class="fab fa-dribbble"></i>
-          <a href="http://dribbble.com/juliettebricout/">dribbble.com/juliettebricout</a>
-        </p>
-
-      </div>
-
-    </div>
-  </div>
-</section>
+  </section>
 
 <!-- loader -->
 <div id="ftco-loader" class="show fullscreen">
