@@ -53,8 +53,11 @@
             </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a href="index.html" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item active">
+              <a href="products.html" class="nav-link">Products</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">About</a>
@@ -82,34 +85,10 @@
             <div class="col-md-12">
               <div class="heading-section ftco-animate">
                 <div class="text">
-                  <span class="subheading">Juliette Bricout</span>
+                  <span class="subheading">Buy Figma templates</span>
                   <h2 class="mb-2" style="font-weight: 600!important;">
-                    <span>UX/UI Designer</span>&nbsp;<a href="http://linkedin.com/in/juliettebricout/"><img src="../images/linkedin.svg" width="25px" style="opacity: 0.1;"></a> 
-                    <a href="http://dribbble.com/juliettebricout/"><img src="../images/dribbble.svg" width="25px" style="opacity: 0.1;"></a></h2>
-                  <p>I am a UX/UI designer who loves creating friendly user experiences.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="bg-light" id="portfolio">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 ftco-animate mt-5">
-                <div class="text text-center">
-                  <div class="slider-text">
-                    <p class="breadcrumbs">Latest projects</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row ftco-animate" style="padding-bottom: 5rem;">
-              <!-- Load Stripe.js on your website. -->
-
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
+                    <span>Custom organized Figma templates to download</span>
+                    <button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
   id="checkout-button-price_1LOOBeCh8ywJFfnU07JNNHxr"
   role="link"
@@ -117,47 +96,12 @@
 >
   Buy template
 </button>
-
-<div id="error-message"></div>
-
-<script>
-(function() {
-  var stripe = Stripe('pk_live_51LONxYCh8ywJFfnUlY6nKIkn6L4l7IGoXPyAY7ASLjxjTf8DbCMYY04WK0fPZGao5idQpwLxrlv4LQODbT1W4qrC00AV4O0pN0');
-
-  var checkoutButton = document.getElementById('checkout-button-price_1LOOBeCh8ywJFfnU07JNNHxr');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1LOOBeCh8ywJFfnU07JNNHxr', quantity: 1}],
-      mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: 'https://juliettebricout.com/success',
-      cancelUrl: 'https://juliettebricout.com/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen">
