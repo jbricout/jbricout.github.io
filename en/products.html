@@ -110,17 +110,18 @@
               <div class="col-md-6 mt-3 ftco-animate">
                   <a href="../furniture-app.html"><img src="../images/galerie/furniture-store.png" alt="" class="img-fluid" style="border:10px solid white;border-bottom:10px solid white;"></a>
                 <!-- Load Stripe.js on your website. -->
+<!-- Load Stripe.js on your website. -->
 <script src="https://js.stripe.com/v3"></script>
 
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                 <div class="text text-center mt-4">
 <button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
-  id="checkout-button-price_1LOOBeCh8ywJFfnU07JNNHxr"
+  id="checkout-button-price_1LOSeXCh8ywJFfnUA7YDRpli"
   role="link"
   type="button"
-        >
-  Buy template · $10
+>
+  Buy Template · $10
                   </button></div>
 
 <div id="error-message"></div>
@@ -129,14 +130,14 @@
 (function() {
   var stripe = Stripe('pk_live_51LONxYCh8ywJFfnUlY6nKIkn6L4l7IGoXPyAY7ASLjxjTf8DbCMYY04WK0fPZGao5idQpwLxrlv4LQODbT1W4qrC00AV4O0pN0');
 
-  var checkoutButton = document.getElementById('checkout-button-price_1LOOBeCh8ywJFfnU07JNNHxr');
+  var checkoutButton = document.getElementById('checkout-button-price_1LOSeXCh8ywJFfnUA7YDRpli');
   checkoutButton.addEventListener('click', function () {
     /*
      * When the customer clicks on the button, redirect
      * them to Checkout.
      */
     stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1LOOBeCh8ywJFfnU07JNNHxr', quantity: 1}],
+      lineItems: [{price: 'price_1LOSeXCh8ywJFfnUA7YDRpli', quantity: 1}],
       mode: 'payment',
       /*
        * Do not rely on the redirect to the successUrl for fulfilling
