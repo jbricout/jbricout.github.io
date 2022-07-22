@@ -105,19 +105,57 @@
               </div>
             </div>
             <div class="row ftco-animate" style="padding-bottom: 5rem;">
-              <div class="col-md-6 mt-5 ftco-animate">
-                  <a href="../hifivework.html"><img src="../images/galerie/HiFiveWork-site.png" alt="" class="img-fluid" style="border:10px solid white;border-bottom:10px solid white;"></a>
-                </div>
-                <div class="col-md-6 mt-5 ftco-animate">
-                    <a href="../resilive.html"><img src="../images/galerie/Resilive3.png" alt="" class="img-fluid" style="border:10px solid white;border-bottom:10px solid white;"></a>
-                  </div>
-                <div class="col-md-6 mt-5 ftco-animate">
-                  <a href="../habeets.html"><img src="../images/galerie/Habeets.png" alt="" class="img-fluid" style="border:10px solid white;border-bottom:10px solid white;"></a>
-                </div>
-              <div class="col-md-6 mt-5 ftco-animate">
-                <a href="../footmark.html"><img src="../images/galerie/footmark.png" alt="" class="img-fluid" style="border:10px solid white;border-bottom:10px solid white;"></a>
-              </div>
-            </div>
+              <!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+  id="checkout-button-price_1LOOBeCh8ywJFfnU07JNNHxr"
+  role="link"
+  type="button"
+>
+  Buy template
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_51LONxYCh8ywJFfnUlY6nKIkn6L4l7IGoXPyAY7ASLjxjTf8DbCMYY04WK0fPZGao5idQpwLxrlv4LQODbT1W4qrC00AV4O0pN0');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1LOOBeCh8ywJFfnU07JNNHxr');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1LOOBeCh8ywJFfnU07JNNHxr', quantity: 1}],
+      mode: 'payment',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'https://juliettebricout.com/success',
+      cancelUrl: 'https://juliettebricout.com/canceled',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
           </div>
         </section>
 
