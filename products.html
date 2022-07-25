@@ -148,29 +148,29 @@
 
   var checkoutButton = document.getElementById('checkout-button-price_1LOSeXCh8ywJFfnUA7YDRpli');
   checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
     stripe.redirectToCheckout({
       lineItems: [{price: 'price_1LOSeXCh8ywJFfnUA7YDRpli', quantity: 1}],
       mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
       successUrl: 'https://juliettebricout.com/products.html',
       cancelUrl: 'https://juliettebricout.com/products.html',
     })
     .then(function (result) {
       if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+  var checkoutButton2 = document.getElementById('checkout-button-price_1LPOAHCh8ywJFfnUbbX2LczU');
+  checkoutButton2.addEventListener('click', function () {
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1LPOAHCh8ywJFfnUbbX2LczU', quantity: 1}],
+      mode: 'payment',
+      successUrl: 'https://juliettebricout.com/products.html',
+      cancelUrl: 'https://juliettebricout.com/products.html',
+    })
+    .then(function (result) {
+      if (result.error) {
         var displayError = document.getElementById('error-message');
         displayError.textContent = result.error.message;
       }
