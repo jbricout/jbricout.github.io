@@ -110,71 +110,12 @@
               <div class="col-md-6 mt-3 ftco-animate">
                   <a href="furniture-app.html">
                     <img src="/images/galerie/furniture-store.png" alt="" class="img-fluid" style="border:10px solid white;border-bottom:10px solid white;"></a>
-                      <script src="https://js.stripe.com/v3"></script>
-                      <div class="text text-center mt-4">
-                      <button
-                        style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
-                        id="checkout-button-price_1LOSeXCh8ywJFfnUA7YDRpli"
-                        role="link"
-                        type="button"
-                      >
-                        Acheter · $10
-                      </button>
-                   </div>
+                     
                 </div>
               
                 <div class="col-md-6 mt-3 ftco-animate">
                   <a href="meditation-app.html">
                     <img src="/images/galerie/meditation-app.png" alt="" class="img-fluid" style="border:10px solid white;border-bottom:10px solid white;"></a>
-                    <script src="https://js.stripe.com/v3"></script>
-                      <div class="text text-center mt-4">
-                        <button
-                          style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
-                          id="checkout-button-price_1LPOAHCh8ywJFfnUbbX2LczU"
-                          role="link"
-                          type="button"
-                        >
-                          Acheter · $10
-                        </button>
-                      </div>
-                <div id="error-message-2"></div>
-
-<script>
-(function() {
-  var stripe = Stripe('pk_live_51LONxYCh8ywJFfnUlY6nKIkn6L4l7IGoXPyAY7ASLjxjTf8DbCMYY04WK0fPZGao5idQpwLxrlv4LQODbT1W4qrC00AV4O0pN0');
-
-  var checkoutButton = document.getElementById('checkout-button-price_1LOSeXCh8ywJFfnUA7YDRpli');
-  checkoutButton.addEventListener('click', function () {
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1LOSeXCh8ywJFfnUA7YDRpli', quantity: 1}],
-      mode: 'payment',
-      successUrl: 'https://juliettebricout.com/products.html',
-      cancelUrl: 'https://juliettebricout.com/products.html',
-    })
-    .then(function (result) {
-      if (result.error) {
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-  var checkoutButton2 = document.getElementById('checkout-button-price_1LPOAHCh8ywJFfnUbbX2LczU');
-  checkoutButton2.addEventListener('click', function () {
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1LPOAHCh8ywJFfnUbbX2LczU', quantity: 1}],
-      mode: 'payment',
-      successUrl: 'https://juliettebricout.com/products.html',
-      cancelUrl: 'https://juliettebricout.com/products.html',
-    })
-    .then(function (result) {
-      if (result.error) {
-        var displayError = document.getElementById('error-message-2');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
              
             </div>
           </div>
