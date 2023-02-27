@@ -98,57 +98,21 @@ les utilisateurs finaux peuvent être facturés/payer.
 Utilisation totalement libre pour vos projets,
 même pour créer des produits finaux
 produits finaux numériques pour lesquels vous pouvez gagner de l'argent. Convient aux entreprises, agences, startups, entreprises, équipes, etc.</p>
-  <script src="https://js.stripe.com/v3"></script>
 
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                 <div class="text text-center mt-4">
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
-  id="checkout-button-price_1LOSeXCh8ywJFfnUA7YDRpli"
-  role="link"
-  type="button"
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1MgCT1Ch8ywJFfnU20yXi4o9"
+  publishable-key="pk_live_51LONxYCh8ywJFfnUlY6nKIkn6L4l7IGoXPyAY7ASLjxjTf8DbCMYY04WK0fPZGao5idQpwLxrlv4LQODbT1W4qrC00AV4O0pN0"
 >
-  Acheter · $10
-                  </button></div>
+</stripe-buy-button></div>
 
 <div id="error-message"></div>
 
-<script>
-(function() {
-  var stripe = Stripe('pk_live_51LONxYCh8ywJFfnUlY6nKIkn6L4l7IGoXPyAY7ASLjxjTf8DbCMYY04WK0fPZGao5idQpwLxrlv4LQODbT1W4qrC00AV4O0pN0');
-
-  var checkoutButton = document.getElementById('checkout-button-price_1LOSeXCh8ywJFfnUA7YDRpli');
-  checkoutButton.addEventListener('click', function () {
-    /*
-     * When the customer clicks on the button, redirect
-     * them to Checkout.
-     */
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1LOSeXCh8ywJFfnUA7YDRpli', quantity: 1}],
-      mode: 'payment',
-      /*
-       * Do not rely on the redirect to the successUrl for fulfilling
-       * purchases, customers may not always reach the success_url after
-       * a successful payment.
-       * Instead use one of the strategies described in
-       * https://stripe.com/docs/payments/checkout/fulfill-orders
-       */
-      successUrl: 'https://juliettebricout.com/products.html',
-      cancelUrl: 'https://juliettebricout.com/products.html',
-    })
-    .then(function (result) {
-      if (result.error) {
-        /*
-         * If `redirectToCheckout` fails due to a browser or network
-         * error, display the localized error message to your customer.
-         */
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
           </div>
           
         </div>
