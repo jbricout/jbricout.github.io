@@ -102,6 +102,19 @@ products where you can earn money. Suitable for companies, agencies, startups, b
 
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
                 <div class="text text-center mt-4">
+                  
+                  <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1MgC9ZCh8ywJFfnUEh613KxO"
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+  publishable-key="pk_live_51LONxYCh8ywJFfnUlY6nKIkn6L4l7IGoXPyAY7ASLjxjTf8DbCMYY04WK0fPZGao5idQpwLxrlv4LQODbT1W4qrC00AV4O0pN0"
+>
+</stripe-buy-button>
+                  
+                  
 <button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
   id="checkout-button-price_1LPOAHCh8ywJFfnUbbX2LczU"
@@ -113,27 +126,7 @@ products where you can earn money. Suitable for companies, agencies, startups, b
 
 <div id="error-message"></div>
 
-<script>
-(function() {
-  var stripe = Stripe('pk_live_51LONxYCh8ywJFfnUlY6nKIkn6L4l7IGoXPyAY7ASLjxjTf8DbCMYY04WK0fPZGao5idQpwLxrlv4LQODbT1W4qrC00AV4O0pN0');
 
-  var checkoutButton = document.getElementById('checkout-button-price_1LPOAHCh8ywJFfnUbbX2LczU');
-  checkoutButton.addEventListener('click', function () {
-    stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1LPOAHCh8ywJFfnUbbX2LczU', quantity: 1}],
-      mode: 'payment',
-      successUrl: 'https://juliettebricout.com/en/products.html',
-      cancelUrl: 'https://juliettebricout.com/en/products.html',
-    })
-    .then(function (result) {
-      if (result.error) {
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
           </div>
           
         </div>
